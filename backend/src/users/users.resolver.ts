@@ -17,8 +17,8 @@ export class UsersResolver {
   }
 
   @Query(() => UserEntity, {nullable: true, description: 'Find user by email'})
-  async findOne(@Args('username') username: string): Promise<UserEntity> {
-    return this.userService.findOne(username)
+  async findOne(@Args('email') email: string): Promise<UserEntity> {
+    return this.userService.findOne(email)
   }
 
   @UseGuards(JwtAuthGuard)

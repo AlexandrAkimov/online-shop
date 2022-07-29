@@ -21,7 +21,7 @@ type Query {
   findAll: [UserEntity!]!
 
   """Find user by email"""
-  findOne(username: String!): UserEntity
+  findOne(email: String!): UserEntity
 }
 
 type UserEntity {
